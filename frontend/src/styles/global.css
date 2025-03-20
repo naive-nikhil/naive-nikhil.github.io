@@ -14,10 +14,6 @@
     transition: all ease-in 300ms;
 }
 
-html, body{
-    overflow-x: hidden;
-}
-
 
 .sidebar_menu.active{
     width: 100%;
