@@ -5,76 +5,7 @@ const currentPath = pathname.slice(1); //
 
 <div class="w-full flex flex-col justify-between h-screen pt-[30px]">
   <div
-    class="absolute top-[280px] w-full hidden justify-between items-center -z-1 px-[20px] sm:px-[67px] md:px-[250px] 2xl:flex"
-  >
-    <div class="flex flex-col gap-16">
-      <svg
-        class="ml-[60px]"
-        width="85"
-        height="43"
-        viewBox="0 0 85 43"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1.5 4.00006L28.5 1.50006L49 41.5001L84 14.5001"
-          stroke="#0C0F03"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-
-      <svg
-        width="44"
-        height="53"
-        viewBox="0 0 44 53"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M19 1.50006L1 33.0001L36.5 52.0001L43 18.5001L19 1.50006Z"
-          fill="#FEE145"
-          stroke="#0C0F03"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-    </div>
-    <div class="flex flex-col gap-16">
-      <svg
-        width="43"
-        height="61"
-        viewBox="0 0 43 61"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M16.5 1.5L1 42L27.5 59.5L41.5 33.5L16.5 1.5Z"
-          fill="#01CC65"
-          stroke="#0C0F03"
-          stroke-width="2"
-          stroke-linejoin="round"></path>
-      </svg>
-      <svg
-        class="-ml-[60px]"
-        width="96"
-        height="67"
-        viewBox="0 0 96 67"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M48.5 66L38.6537 40.078L95 17L48.5 66Z" fill="#3463E5"></path>
-        <path
-          d="M24 1.5L48.5 66L95 17L1 55.5"
-          stroke="#0C0F03"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-    </div>
-  </div>
-  <div
-    class="flex justify-between items-center px-[20px] sm:px-[70px] md:px-[100px]"
+    class="flex justify-between items-center px-[20px] sm:px-[70px] md:px-[200px]"
   >
     <div class="flex gap-2">
       <a href="/" class="font-bold text-lg/4.5 text-[#0C0F03]">
@@ -88,21 +19,9 @@ const currentPath = pathname.slice(1); //
     </div>
 
     <ul class="hidden sm:flex items-center font-medium text-[#545849] gap-12">
-      <li
-        class="cursor-pointer hover:text-black transition-all ease-in delay-50"
-      >
-        About Me
-      </li>
-      <li
-        class="cursor-pointer hover:text-black transition-all ease-in delay-50"
-      >
-        Portfolio
-      </li>
-      <li
-        class="cursor-pointer hover:text-black transition-all ease-in delay-50"
-      >
-        Contact
-      </li>
+      <li class="cursor-pointer hover:text-black">About Me</li>
+      <li class="cursor-pointer hover:text-black">Portfolio</li>
+      <li class="cursor-pointer hover:text-black">Contact</li>
     </ul>
     <button class="sm:hidden cursor-pointer" id="menu_icon" aria-label="Menu">
       <svg
@@ -121,7 +40,7 @@ const currentPath = pathname.slice(1); //
       </svg>
     </button>
     <div
-      class="sidebar_menu absolute z-10 top-0 right-0 bottom-0 overflow-hidden bg-white w-0 transition-all duration-400 cursor-pointer"
+      class="sidebar_menu absolute z-10 top-0 right-0 bottom-0 overflow-hidden bg-white w-0 cursor-pointer"
     >
       <div class="flex flex-col text-[#545849] border-[#545849]">
         <button
@@ -189,17 +108,68 @@ const currentPath = pathname.slice(1); //
       class="flex flex-col sm:flex-row gap-4 mt-4 text-[#0C0F03] text-sm sm:text-base font-semibold"
     >
       <button
-        class="bg-[#C8F031] rounded-full border border-[#0C0F03] px-[35px] py-[15px] shadow-[4px_4px_0px_#0C0F03] hover:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1 transition-all duration-300"
+        class="bg-[#C8F031] rounded-full border border-[#0C0F03] px-[35px] py-[15px] shadow-[4px_4px_0px_#0C0F03] hover:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1"
         >Get In Touch</button
       >
       <button
-        class="rounded-full border border-[#0C0F03] px-[35px] py-[15px] shadow-[4px_4px_0px_#0C0F03] hover:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1 transition-all duration-300"
+        class="rounded-full border border-[#0C0F03] px-[35px] py-[15px] shadow-[4px_4px_0px_#0C0F03] hover:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1"
         >View Portfolio</button
       >
     </div>
   </div>
-  <div class="bg-[#0C0F03] w-full h-[104px]">
-    <p></p>
+  <div class="bg-[#0C0F03] text-lg font-bold overflow-hidden">
+    <div
+      class="flex w-max items-center invert h-[104px] gap-[40px] animate-infinite-scroll"
+    >
+      <div class="flex-shrink-0 flex items-center gap-[40px]">
+        <img class="h-12 w-12" src="/svg/mongodb.svg" />
+        <p>MongoDB</p>
+        <img class="h-12 w-12" src="/svg/express.svg" />
+        <p>Express.JS</p>
+        <img class="h-12 w-12" src="/svg/react.svg" />
+        <p>React.JS</p>
+        <img class="h-12 w-12" src="/svg/nodedotjs.svg" />
+        <p>Node.Js</p>
+        <img class="h-12 w-12" src="/svg/html5.svg" />
+        <p>HTML5</p>
+        <img class="h-12 w-12" src="/svg/css.svg" />
+        <p>CSS</p>
+        <img class="h-12 w-12" src="/svg/javascript.svg" />
+        <p>JavaScript</p>
+        <img class="h-12 w-12" src="/svg/astro.svg" />
+        <p>Astro</p>
+        <img class="h-12 w-12" src="/svg/git.svg" />
+        <p>Git</p>
+        <img class="h-12 w-12" src="/svg/github.svg" />
+        <p>Github</p>
+        <img class="h-12 w-12" src="/svg/postman.svg" />
+        <p>Postman</p>
+      </div>
+      <div class="flex-shrink-0 flex items-center gap-[40px]">
+        <img class="h-12 w-12" src="/svg/mongodb.svg" />
+        <p>MongoDB</p>
+        <img class="h-12 w-12" src="/svg/express.svg" />
+        <p>Express.JS</p>
+        <img class="h-12 w-12" src="/svg/react.svg" />
+        <p>React.JS</p>
+        <img class="h-12 w-12" src="/svg/nodedotjs.svg" />
+        <p>Node.Js</p>
+        <img class="h-12 w-12" src="/svg/html5.svg" />
+        <p>HTML5</p>
+        <img class="h-12 w-12" src="/svg/css.svg" />
+        <p>CSS</p>
+        <img class="h-12 w-12" src="/svg/javascript.svg" />
+        <p>JavaScript</p>
+        <img class="h-12 w-12" src="/svg/astro.svg" />
+        <p>Astro</p>
+        <img class="h-12 w-12" src="/svg/git.svg" />
+        <p>Git</p>
+        <img class="h-12 w-12" src="/svg/github.svg" />
+        <p>Github</p>
+        <img class="h-12 w-12" src="/svg/postman.svg" />
+        <p>Postman</p>
+      </div>
+    </div>
   </div>
 </div>
 

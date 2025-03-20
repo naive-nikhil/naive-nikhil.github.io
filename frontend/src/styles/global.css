@@ -11,6 +11,7 @@
     font-family: 'Syne', sans-serif;
     outline: none;
     user-select: none;
+    transition: all ease-in 300ms;
 }
 
 html, body{
@@ -34,4 +35,18 @@ html, body{
   .animate-wave {
     animation: wave 2s ease-in-out infinite;
     transform-origin: bottom center;
+  }
+
+  @keyframes infiniteScroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50%));
+    }
+  }
+  
+  .animate-infinite-scroll {
+    animation: infiniteScroll 20s linear infinite; /* Adjust speed as needed */
+    will-change: transform;
   }
