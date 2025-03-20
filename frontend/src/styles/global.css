@@ -9,6 +9,8 @@
 
 *{
     font-family: 'Syne', sans-serif;
+    outline: none;
+    user-select: none;
 }
 
 html, body{
