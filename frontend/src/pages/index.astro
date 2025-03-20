@@ -1,45 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Scroll from "../components/scroll.astro";
+import Credit from "../components/Credit.astro";
 import Hero from "../components/Hero.astro";
 ---
 
 <Layout>
-  <div class="bg-black h-screen w-full relative overflow-hidden">
-    <!-- Grid pattern container -->
-    <div
-      class="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:35px_35px] z-1"
-    >
-    </div>
-
-    <!-- Custom directional vignette overlay -->
-    <div class="absolute inset-0 pointer-events-none z-2">
-      <div
-        class="absolute inset-x-0 top-0 h-1/5 bg-gradient-to-b from-black to-transparent"
-      >
-      </div>
-      <div
-        class="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-black to-transparent"
-      >
-      </div>
-
-      <div
-        class="absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-black via-black/50 to-transparent"
-      >
-      </div>
-      <div
-        class="absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-black via-black/50 to-transparent"
-      >
-      </div>
-    </div>
-    <Hero />
-  </div>
-  <Navbar />
-  <Scroll />
-  <Scroll />
-  <Scroll />
-  <Scroll />
-  <Scroll />
-  <Scroll />
+  <Hero />
 </Layout>

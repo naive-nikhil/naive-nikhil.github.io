@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
 
+::-webkit-scrollbar{
+    display: none;
+}
+
+
 *{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Syne', sans-serif;
 }
 
 html, body{
     overflow-x: hidden;
-    color-scheme: dark;
 }
