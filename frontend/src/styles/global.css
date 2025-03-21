@@ -7,6 +7,8 @@
 }
 
 
+
+
 *{
     font-family: 'Syne', sans-serif;
     outline: none;
@@ -48,4 +50,8 @@ body{
   
   .animate-carousel {
     animation: scroll var(--scroll-duration) linear infinite;
+  }
+
+  .text-dm{
+    font-family: "DM Sans", sans-serif !important;
   }
