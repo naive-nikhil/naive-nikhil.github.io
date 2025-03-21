@@ -11,7 +11,11 @@
     font-family: 'Syne', sans-serif;
     outline: none;
     user-select: none;
-    transition: all ease-in 300ms;
+    transition: all ease-in 200ms;
+}
+
+body{
+  color: #0C0F03;
 }
 
 
