@@ -18,9 +18,15 @@ const currentPath = pathname.slice(1);
   </div>
 
   <ul class="hidden sm:flex items-center font-medium text-[#545849] gap-12">
-    <li class="cursor-pointer hover:text-black">About Me</li>
-    <li class="cursor-pointer hover:text-black">Portfolio</li>
-    <li class="cursor-pointer hover:text-black">Contact</li>
+    <li class="cursor-pointer hover:text-black">
+      <a href="/about">About Me</a>
+    </li>
+    <li class="cursor-pointer hover:text-black">
+      <a href="/portfolio">Portfolio</a>
+    </li>
+    <li class="cursor-pointer hover:text-black">
+      <a href="/contact">Contact</a>
+    </li>
   </ul>
   <p
     id="menu_icon"
@@ -48,9 +54,9 @@ const currentPath = pathname.slice(1);
     <div
       class="flex flex-col items-center gap-5 font-bold text-2xl text-center"
     >
-      <p>About Me</p>
-      <p>Portfolio</p>
-      <p>Contact</p>
+      <p><a href="/about">About Me</a></p>
+      <p><a href="/portfolio">Portfolio</a></p>
+      <p><a href="/contact">Contact</a></p>
       <p
         id="back_icon"
         aria-label="Menu"
