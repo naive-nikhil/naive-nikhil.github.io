@@ -3,7 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
-<div class="w-full flex flex-col justify-between h-screen pt-[30px]">
+<div class="w-full flex flex-col sm:h-screen justify-between pt-[30px]">
   <div
     class="flex justify-between items-center px-[20px] sm:px-[70px] md:px-[200px]"
   >
@@ -81,7 +81,7 @@ const currentPath = pathname.slice(1);
   </div>
 
   <div
-    class="flex flex-col justify-center items-center gap-4 px-[20px] my-8 sm:my-0"
+    class="flex flex-col justify-center items-center gap-4 px-[20px] my-20 sm:my-0"
   >
     <div
       class="flex flex-col-reverse sm:flex-row gap-[20px] text-center justify-center items-center"
