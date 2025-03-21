@@ -21,9 +21,7 @@ body{
 }
 
 
-.sidebar_menu.active{
-    width: 100%;
-}
+
 
 @keyframes wave {
     0% { transform: rotate(0deg) scale(1); }

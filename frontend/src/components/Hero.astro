@@ -1,85 +1,4 @@
----
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
----
-
 <div class="w-full flex flex-col sm:h-screen justify-between pt-[30px]">
-  <div
-    class="flex justify-between items-center px-[20px] sm:px-[70px] md:px-[200px]"
-  >
-    <div class="flex gap-2">
-      <a href="/" class="font-bold text-lg/4.5 text-[#0C0F03]">
-        <span>nikhil</span>
-        <span>.</span>
-        <span
-          class="bg-[#C8F031] px-[12px] py-[6px] border rounded-full border-[#0C0F03]"
-          >uhsrav</span
-        >
-      </a>
-    </div>
-
-    <ul class="hidden sm:flex items-center font-medium text-[#545849] gap-12">
-      <li class="cursor-pointer hover:text-black">About Me</li>
-      <li class="cursor-pointer hover:text-black">Portfolio</li>
-      <li class="cursor-pointer hover:text-black">Contact</li>
-    </ul>
-    <button class="sm:hidden cursor-pointer" id="menu_icon" aria-label="Menu">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        class="w-8 h-8"
-      >
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
-    <div
-      class="sidebar_menu absolute z-10 top-0 right-0 bottom-0 overflow-hidden bg-white w-0 cursor-pointer"
-    >
-      <div class="flex flex-col text-[#545849] border-[#545849]">
-        <button
-          class="flex items-center gap-2 p-3 cursor-pointer"
-          id="back_icon"
-          aria-label="Close menu"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="w-6 h-6"
-          >
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-          <span class="pt-1">Back</span>
-        </button>
-        <p class="py-2 pl-6 border-t">
-          <a href="/" class={currentPath === "" ? "active" : ""}>ABOUT ME</a>
-        </p>
-        <p class="py-2 pl-6 border-t">
-          <a href="/about" class={currentPath === "about" ? "active" : ""}
-            >PORTFOLIO</a
-          >
-        </p>
-        <p class="py-2 pl-6 border-t last:border-b-1">
-          <a
-            href="/employers"
-            class={currentPath === "employers" ? "active" : ""}>CONTACT</a
-          >
-        </p>
-      </div>
-    </div>
-  </div>
-
   <div
     class="flex flex-col justify-center items-center gap-4 px-[20px] my-20 sm:my-0"
   >
@@ -185,47 +104,33 @@ const currentPath = pathname.slice(1);
     const list = document.querySelector(".tech-list");
 
     // Clone the list and append it to create the infinite effect
-    const clone = list.cloneNode(true);
-    container.appendChild(clone);
+    const clone = list?.cloneNode(true);
+    container?.appendChild(clone);
 
     // Get the width of a single list
-    const listWidth = list.offsetWidth;
+    const listWidth = list?.offsetWidth;
 
     // Set animation properties dynamically through CSS variables
     const carousel = document.getElementById("tech-carousel");
-    carousel.style.setProperty("--list-width", `${listWidth}px`);
+    carousel?.style.setProperty("--list-width", `${listWidth}px`);
 
     // Desired speed - change this value to control speed (pixels per second)
     const pixelsPerSecond = 100;
 
     // Calculate duration based on width and desired speed
     const duration = listWidth / pixelsPerSecond;
-    carousel.style.setProperty("--scroll-duration", `${duration}s`);
+    carousel?.style.setProperty("--scroll-duration", `${duration}s`);
 
     // Add the animation class after calculations
-    container.classList.add("animate-carousel");
+    container?.classList.add("animate-carousel");
 
     // Handle resize events to recalculate if needed
     window.addEventListener("resize", function () {
-      const updatedWidth = list.offsetWidth;
+      const updatedWidth = list?.offsetWidth;
       const updatedDuration = updatedWidth / pixelsPerSecond;
 
-      carousel.style.setProperty("--list-width", `${updatedWidth}px`);
-      carousel.style.setProperty("--scroll-duration", `${updatedDuration}s`);
+      carousel?.style.setProperty("--list-width", `${updatedWidth}px`);
+      carousel?.style.setProperty("--scroll-duration", `${updatedDuration}s`);
     });
-  });
-</script>
-
-<script>
-  const menuIcon = document.querySelector("#menu_icon");
-  const backIcon = document.querySelector("#back_icon");
-  const menu = document.querySelector(".sidebar_menu");
-
-  menuIcon?.addEventListener("click", () => {
-    menu?.classList.toggle("active");
-  });
-
-  backIcon?.addEventListener("click", () => {
-    menu?.classList.toggle("active");
   });
 </script>

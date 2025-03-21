@@ -1,0 +1,99 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<div
+  class="w-full max-w-[1280px] px-6 sm:px-12 md:px-24 lg:px-48 xl:px-6 py-6 mx-auto flex justify-between items-center"
+>
+  <div class="flex gap-2">
+    <a href="/" class="font-bold text-lg/4.5 text-[#0C0F03]">
+      <span>nikhil</span>
+      <span>.</span>
+      <span
+        class="bg-[#C8F031] px-[12px] py-[6px] border rounded-full border-[#0C0F03]"
+        >uhsrav</span
+      >
+    </a>
+  </div>
+
+  <ul class="hidden sm:flex items-center font-medium text-[#545849] gap-12">
+    <li class="cursor-pointer hover:text-black">About Me</li>
+    <li class="cursor-pointer hover:text-black">Portfolio</li>
+    <li class="cursor-pointer hover:text-black">Contact</li>
+  </ul>
+  <p
+    id="menu_icon"
+    aria-label="Menu"
+    class="sm:hidden rotate-180 cursor-pointer p-4 border border-[#0C0F03] rounded-full w-fit shadow-[-2px_-2px_0px_#0C0F03] hover:shadow-[-4px_-4px_0px_#0C0F03] hover:-translate-y-1 hover:bg-[#C8F031]"
+  >
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.51465 1.51416H12.4861M12.4861 1.51416V12.4856M12.4861 1.51416L1.51465 12.4856"
+        stroke="#0C0F03"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </p>
+  <div
+    class="sidebar_menu absolute z-10 top-0 right-0 bottom-0 overflow-hidden bg-white w-0 cursor-pointer flex justify-center items-center"
+  >
+    <div
+      class="flex flex-col items-center gap-5 font-bold text-2xl text-center"
+    >
+      <p>About Me</p>
+      <p>Portfolio</p>
+      <p>Contact</p>
+      <p
+        id="back_icon"
+        aria-label="Menu"
+        class="mt-5 sm:hidden cursor-pointer p-4 bg-[#C8F031] border border-[#0C0F03] rounded-full w-fit shadow-[2px_2px_0px_#0C0F03] hover:shadow-[4px_4px_0px_#0C0F03] hover:-translate-y-1 hover:bg-[#C8F031]"
+      >
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.51465 1.51416H12.4861M12.4861 1.51416V12.4856M12.4861 1.51416L1.51465 12.4856"
+            stroke="#0C0F03"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+  const menuIcon = document.querySelector("#menu_icon");
+  const backIcon = document.querySelector("#back_icon");
+  const menu = document.querySelector(".sidebar_menu");
+
+  menuIcon?.addEventListener("click", () => {
+    menu?.classList.toggle("active");
+    // Lock scrolling when sidebar is opened
+    document.body.style.overflow = "hidden";
+  });
+
+  backIcon?.addEventListener("click", () => {
+    menu?.classList.toggle("active");
+    // Enable scrolling when sidebar is closed
+    document.body.style.overflow = "auto";
+  });
+</script>
+
+<style>
+  .sidebar_menu.active {
+    width: 100%;
+  }
+</style>
