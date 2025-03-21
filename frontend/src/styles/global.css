@@ -33,16 +33,15 @@
     transform-origin: bottom center;
   }
 
-  @keyframes infiniteScroll {
-    from {
+  @keyframes scroll {
+    0% {
       transform: translateX(0);
     }
-    to {
-      transform: translateX(calc(-50%));
+    100% {
+      transform: translateX(calc(-1 * var(--list-width)));
     }
   }
   
-  .animate-infinite-scroll {
-    animation: infiniteScroll 20s linear infinite; /* Adjust speed as needed */
-    will-change: transform;
+  .animate-carousel {
+    animation: scroll var(--scroll-duration) linear infinite;
   }
