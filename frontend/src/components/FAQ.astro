@@ -1,3 +1,7 @@
+---
+// FAQ.astro
+---
+
 <div
   class="w-full max-w-[1280px] px-6 sm:px-12 md:px-24 lg:px-48 xl:px-6 mx-auto my-20 flex flex-col xl:flex-row gap-10 items-center"
 >
@@ -14,52 +18,21 @@
       about creating memorable experiences.
     </p>
   </div>
-  <div class="w-full xl:w-1/2 flex flex-col gap-5">
+  <div class="w-full xl:w-1/2 flex flex-col gap-5" id="faq-container">
+    <!-- Question 1 -->
     <div
-      class="flex items-center justify-between gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
-    >
-      <p>What is your hourly rate?</p>
-      <div>
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="0.5"
-            y="0.5"
-            width="31"
-            height="31"
-            rx="15.5"
-            fill="white"
-            stroke="#0C0F03"></rect>
-          <rect x="9" y="15" width="14" height="2" rx="1" fill="#0C0F03"></rect>
-          <rect
-            x="17"
-            y="9"
-            width="14"
-            height="2"
-            rx="1"
-            transform="rotate(90 17 9)"
-            fill="#0C0F03"></rect>
-        </svg>
-      </div>
-    </div>
-
-    <div
-      class="flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border bg-[#C8F031] border-[#0C0F03] rounded-xl shadow-[4px_4px_0px_#0C0F03] hover:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1"
+      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
     >
       <div class="flex items-center justify-between gap-5">
-        <p>What kind of services you are providing?</p>
-        <div>
+        <p>What is your hourly rate?</p>
+        <button class="faq-toggle">
           <svg
             width="32"
             height="32"
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class="toggle-icon"
           >
             <rect
               x="0.5"
@@ -71,80 +44,217 @@
               stroke="#0C0F03"></rect>
             <rect x="9" y="15" width="14" height="2" rx="1" fill="#0C0F03"
             ></rect>
+            <rect
+              x="17"
+              y="9"
+              width="14"
+              height="2"
+              rx="1"
+              transform="rotate(90 17 9)"
+              fill="#0C0F03"
+              class="vertical-line"></rect>
           </svg>
-        </div>
+        </button>
       </div>
-      <p class="text-base sm:text-lg font-normal">
-        I start by learn and research based on client brief and resource to gain
-        about the needs. I provide web design, UI design, UX design, mobile app
-        and web app design services respectively.
-      </p>
-    </div>
-
-    <div
-      class="flex items-center justify-between gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
-    >
-      <p>What's the time-zone do you work in?</p>
-      <div>
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="0.5"
-            y="0.5"
-            width="31"
-            height="31"
-            rx="15.5"
-            fill="white"
-            stroke="#0C0F03"></rect>
-          <rect x="9" y="15" width="14" height="2" rx="1" fill="#0C0F03"></rect>
-          <rect
-            x="17"
-            y="9"
-            width="14"
-            height="2"
-            rx="1"
-            transform="rotate(90 17 9)"
-            fill="#0C0F03"></rect>
-        </svg>
+      <div class="faq-answer hidden">
+        <p class="text-base sm:text-lg font-normal">
+          My hourly rate depends on the project scope and requirements. I
+          typically charge between $50-$100 per hour based on complexity and
+          deadlines.
+        </p>
       </div>
     </div>
 
+    <!-- Question 2 -->
     <div
-      class="flex items-center justify-between gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
+      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
     >
-      <p>Do you give lifetime support?</p>
-      <div>
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="0.5"
-            y="0.5"
-            width="31"
-            height="31"
-            rx="15.5"
-            fill="white"
-            stroke="#0C0F03"></rect>
-          <rect x="9" y="15" width="14" height="2" rx="1" fill="#0C0F03"></rect>
-          <rect
-            x="17"
-            y="9"
-            width="14"
-            height="2"
-            rx="1"
-            transform="rotate(90 17 9)"
-            fill="#0C0F03"></rect>
-        </svg>
+      <div class="flex items-center justify-between gap-5">
+        <p>What kind of services you are providing?</p>
+        <button class="faq-toggle">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="toggle-icon"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              fill="white"
+              stroke="#0C0F03"></rect>
+            <rect x="9" y="15" width="14" height="2" rx="1" fill="#0C0F03"
+            ></rect>
+            <rect
+              x="17"
+              y="9"
+              width="14"
+              height="2"
+              rx="1"
+              transform="rotate(90 17 9)"
+              fill="#0C0F03"
+              class="vertical-line"></rect>
+          </svg>
+        </button>
+      </div>
+      <div class="faq-answer hidden">
+        <p class="text-base sm:text-lg font-normal">
+          I start by learn and research based on client brief and resource to
+          gain about the needs. I provide web design, UI design, UX design,
+          mobile app and web app design services respectively.
+        </p>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div
+      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
+    >
+      <div class="flex items-center justify-between gap-5">
+        <p>What's the time-zone do you work in?</p>
+        <button class="faq-toggle">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="toggle-icon"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              fill="white"
+              stroke="#0C0F03"></rect>
+            <rect x="9" y="15" width="14" height="2" rx="1" fill="#0C0F03"
+            ></rect>
+            <rect
+              x="17"
+              y="9"
+              width="14"
+              height="2"
+              rx="1"
+              transform="rotate(90 17 9)"
+              fill="#0C0F03"
+              class="vertical-line"></rect>
+          </svg>
+        </button>
+      </div>
+      <div class="faq-answer hidden">
+        <p class="text-base sm:text-lg font-normal">
+          I work in the Indian Standard Time (IST) timezone (GMT+5:30), but I'm
+          flexible and can accommodate different time zones for client meetings
+          and communication.
+        </p>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div
+      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
+    >
+      <div class="flex items-center justify-between gap-5">
+        <p>Do you give lifetime support?</p>
+        <button class="faq-toggle">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="toggle-icon"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              fill="white"
+              stroke="#0C0F03"></rect>
+            <rect x="9" y="15" width="14" height="2" rx="1" fill="#0C0F03"
+            ></rect>
+            <rect
+              x="17"
+              y="9"
+              width="14"
+              height="2"
+              rx="1"
+              transform="rotate(90 17 9)"
+              fill="#0C0F03"
+              class="vertical-line"></rect>
+          </svg>
+        </button>
+      </div>
+      <div class="faq-answer hidden">
+        <p class="text-base sm:text-lg font-normal">
+          I offer 30 days of free support after project completion. For extended
+          support, I provide maintenance packages tailored to your needs.
+        </p>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  // Simple JavaScript to handle the FAQ functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+    const faqToggles = document.querySelectorAll(".faq-toggle");
+
+    faqToggles.forEach((toggle, index) => {
+      toggle.addEventListener("click", function () {
+        const parentItem = this.closest(".faq-item");
+        const answer = parentItem.querySelector(".faq-answer");
+        const verticalLine = this.querySelector(".vertical-line");
+
+        // First close all FAQs
+        faqItems.forEach((item) => {
+          if (item !== parentItem) {
+            item.querySelector(".faq-answer").classList.add("hidden");
+            item.classList.remove(
+              "bg-[#C8F031]",
+              "shadow-[4px_4px_0px_#0C0F03]",
+              "hover:shadow-[8px_8px_0px_#0C0F03]",
+              "hover:-translate-y-1"
+            );
+            item.querySelector(".vertical-line")?.classList.remove("hidden");
+          }
+        });
+
+        // Toggle current FAQ
+        const isHidden = answer.classList.contains("hidden");
+
+        if (isHidden) {
+          // Open this FAQ
+          answer.classList.remove("hidden");
+          parentItem.classList.add(
+            "bg-[#C8F031]",
+            "shadow-[4px_4px_0px_#0C0F03]",
+            "hover:shadow-[8px_8px_0px_#0C0F03]",
+            "hover:-translate-y-1"
+          );
+          verticalLine.classList.add("hidden");
+        } else {
+          // Close this FAQ
+          answer.classList.add("hidden");
+          parentItem.classList.remove(
+            "bg-[#C8F031]",
+            "shadow-[4px_4px_0px_#0C0F03]",
+            "hover:shadow-[8px_8px_0px_#0C0F03]",
+            "hover:-translate-y-1"
+          );
+          verticalLine.classList.remove("hidden");
+        }
+      });
+    });
+  });
+</script>
