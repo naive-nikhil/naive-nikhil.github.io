@@ -40,40 +40,4 @@
   </div>
 </div>
 
-<script>
-  // This will run when the component is mounted
-  document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById("carousel-container");
-    const list = document.querySelector(".tech-list");
 
-    // Clone the list and append it to create the infinite effect
-    const clone = list?.cloneNode(true);
-    container?.appendChild(clone);
-
-    // Get the width of a single list
-    const listWidth = list?.offsetWidth;
-
-    // Set animation properties dynamically through CSS variables
-    const carousel = document.getElementById("tech-carousel");
-    carousel?.style.setProperty("--list-width", `${listWidth}px`);
-
-    // Desired speed - change this value to control speed (pixels per second)
-    const pixelsPerSecond = 100;
-
-    // Calculate duration based on width and desired speed
-    const duration = listWidth / pixelsPerSecond;
-    carousel?.style.setProperty("--scroll-duration", `${duration}s`);
-
-    // Add the animation class after calculations
-    container?.classList.add("animate-carousel");
-
-    // Handle resize events to recalculate if needed
-    window.addEventListener("resize", function () {
-      const updatedWidth = list?.offsetWidth;
-      const updatedDuration = updatedWidth / pixelsPerSecond;
-
-      carousel?.style.setProperty("--list-width", `${updatedWidth}px`);
-      carousel?.style.setProperty("--scroll-duration", `${updatedDuration}s`);
-    });
-  });
-</script>
