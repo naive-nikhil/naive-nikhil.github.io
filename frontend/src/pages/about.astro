@@ -1,56 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/about/Hero.about.astro";
 ---
 
 <Layout>
-  <div
-    class="w-full max-w-[1280px] px-6 sm:px-12 md:px-24 lg:px-48 xl:px-6 py-8 mx-auto my-20 flex justify-between items-center"
-  >
-    <div class="flex flex-col gap-5">
-      <div class="flex items-center gap-5">
-        <p class="hidden xl:block w-[36px] h-[2px] bg-[#0C0F03]"></p>
-        <p class="text-2xl sm:text-3xl md:text-4xl font-medium">Hello, I'm</p>
-        <span
-          class="cursor-pointer text-8xl xl:text-4xl animate-wave transition-transform duration-300 origin-bottom hover:scale-250 hover:rotate-30"
-          >👋</span
-        >
-      </div>
-      <p
-        class="flex justify-center items-center font-bold text-center text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
-      >
-        Nikhil Patel
-      </p>
-      <p
-        class="text-[#545849] font-base w-full sm:w-[600px] text-lg sm:text-xl"
-      >
-        A digital designer and creative developer from Delhi - India passionate
-        about creating memorable experiences.
-      </p>
-      <div
-        class="flex flex-col sm:flex-row gap-4 mt-4 text-[#0C0F03] text-sm sm:text-base font-bold"
-      >
-        <button
-          class="bg-[#C8F031] rounded-full border border-[#0C0F03] px-[35px] py-[15px] shadow-[4px_4px_0px_#0C0F03] hover:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1"
-          >Get In Touch</button
-        >
-        <button
-          class="rounded-full border border-[#0C0F03] px-[35px] py-[15px] shadow-[4px_4px_0px_#0C0F03] hover:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1"
-          >View Portfolio</button
-        >
-      </div>
-    </div>
-    <div
-      class="rounded-full p-2 border border-[#0C0F03] shadow-[2px_2px_2px_#0C0F03]"
-    >
-      <div
-        class="relative w-60 sm:w-80 h-60 sm:h-80 rounded-full overflow-hidden"
-      >
-        <img
-          class="absolute h-full w-full object-cover"
-          src="/images/profile.webp"
-          alt="profile-image"
-        />
-      </div>
-    </div>
-  </div>
+  <Hero />
 </Layout>
