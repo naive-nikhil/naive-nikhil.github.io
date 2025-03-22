@@ -12,15 +12,12 @@
 *{
     font-family: 'Syne', sans-serif;
     outline: none;
-    user-select: none;
     transition: all ease-in 200ms;
 }
 
 body{
   color: #0C0F03;
 }
-
-
 
 
 @keyframes wave {
@@ -35,21 +32,4 @@ body{
   .animate-wave {
     animation: wave 2s ease-in-out infinite;
     transform-origin: bottom center;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-1 * var(--list-width)));
-    }
-  }
-  
-  .animate-carousel {
-    animation: scroll var(--scroll-duration) linear infinite;
-  }
-
-  .text-dm{
-    font-family: "DM Sans", sans-serif !important;
   }
