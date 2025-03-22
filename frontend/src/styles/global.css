@@ -12,6 +12,7 @@
 *{
     font-family: 'Syne', sans-serif;
     outline: none;
+    user-select: none;
     transition: all ease-in 200ms;
 }
 
