@@ -40,3 +40,7 @@ body{
     animation: wave 2s ease-in-out infinite;
     transform-origin: bottom center;
   }
+
+  .text-dm{
+    font-family: "DM Sans", sans-serif !important;
+  }
