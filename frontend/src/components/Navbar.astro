@@ -95,6 +95,54 @@
   });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu_icon");
+    let pressTimer;
+
+    menuIcon.addEventListener("mousedown", function () {
+      pressTimer = setTimeout(() => {
+        // Trigger the CV download
+        const link = document.createElement("a");
+        link.href = "/cv.pdf"; // Ensure cv.pdf is in the root or public directory
+        link.download = "cv.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 800); // 800ms for a long press
+    });
+
+    menuIcon.addEventListener("mouseup", function () {
+      clearTimeout(pressTimer);
+    });
+
+    menuIcon.addEventListener("mouseleave", function () {
+      clearTimeout(pressTimer);
+    });
+
+    // Touch support for mobile
+    menuIcon.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      pressTimer = setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = "/cv.pdf";
+        link.download = "cv.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 800);
+    });
+
+    menuIcon.addEventListener("touchend", function () {
+      clearTimeout(pressTimer);
+    });
+
+    menuIcon.addEventListener("touchcancel", function () {
+      clearTimeout(pressTimer);
+    });
+  });
+</script>
+
 <style>
   .sidebar_menu.active {
     width: 100%;
