@@ -7,7 +7,7 @@
 >
   <div class="w-full xl:w-1/2 flex flex-col gap-5 self-start">
     <p
-      class="font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center xl:text-left"
+      class="font-medium text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center xl:text-left"
     >
       What Clients Normally Ask
     </p>
@@ -21,7 +21,7 @@
   <div class="w-full xl:w-1/2 flex flex-col gap-5" id="faq-container">
     <!-- Question 1 -->
     <div
-      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
+      class="faq-item flex flex-col gap-5 font-medium text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
     >
       <div class="flex items-center justify-between gap-5">
         <p>What is your hourly rate?</p>
@@ -67,7 +67,7 @@
 
     <!-- Question 2 -->
     <div
-      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
+      class="faq-item flex flex-col gap-5 font-medium text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
     >
       <div class="flex items-center justify-between gap-5">
         <p>What kind of services you are providing?</p>
@@ -113,7 +113,7 @@
 
     <!-- Question 3 -->
     <div
-      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
+      class="faq-item flex flex-col gap-5 font-medium text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
     >
       <div class="flex items-center justify-between gap-5">
         <p>What's the time-zone do you work in?</p>
@@ -159,7 +159,7 @@
 
     <!-- Question 4 -->
     <div
-      class="faq-item flex flex-col gap-5 font-bold text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
+      class="faq-item flex flex-col gap-5 font-medium text-lg sm:text-xl px-10 py-8 border border-[#0C0F03] rounded-xl"
     >
       <div class="flex items-center justify-between gap-5">
         <p>Do you give lifetime support?</p>
@@ -221,10 +221,8 @@
           if (item !== parentItem) {
             item.querySelector(".faq-answer").classList.add("hidden");
             item.classList.remove(
-              "bg-[#C8F031]",
-              "shadow-[4px_4px_0px_#0C0F03]",
-              "hover:shadow-[8px_8px_0px_#0C0F03]",
-              "hover:-translate-y-1"
+              "bg-lime-300",
+              "shadow-[2px_2px_0px_#0C0F03]"
             );
             item.querySelector(".vertical-line")?.classList.remove("hidden");
           }
@@ -237,20 +235,16 @@
           // Open this FAQ
           answer.classList.remove("hidden");
           parentItem.classList.add(
-            "bg-[#C8F031]",
-            "shadow-[4px_4px_0px_#0C0F03]",
-            "hover:shadow-[8px_8px_0px_#0C0F03]",
-            "hover:-translate-y-1"
+            "bg-lime-300",
+            "shadow-[2px_2px_0px_#0C0F03]",
           );
           verticalLine.classList.add("hidden");
         } else {
           // Close this FAQ
           answer.classList.add("hidden");
           parentItem.classList.remove(
-            "bg-[#C8F031]",
-            "shadow-[4px_4px_0px_#0C0F03]",
-            "hover:shadow-[8px_8px_0px_#0C0F03]",
-            "hover:-translate-y-1"
+            "bg-lime-300",
+            "shadow-[2px_2px_0px_#0C0F03]",
           );
           verticalLine.classList.remove("hidden");
         }
