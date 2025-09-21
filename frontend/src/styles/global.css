@@ -24,7 +24,7 @@
 }
 
 .hover-active-effect{
-  @apply hover:shadow-[8px_8px_0px_#0C0F03] active:shadow-[8px_8px_0px_#0C0F03] hover:-translate-y-1 active:-translate-y-1
+  @apply hover:shadow-[8px_8px_0px_#44403b] active:shadow-[8px_8px_0px_#44403b] hover:-translate-y-1 active:-translate-y-1
 }
 
 .hover-active-effect-small{
