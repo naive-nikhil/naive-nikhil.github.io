@@ -25,7 +25,6 @@
   <div class="relative sm:hidden flex gap-2">
     <a href="/Nikhil-Resume.pdf" download class="relative">
       <p
-        id="menu_icon"
         aria-label="Download CV"
         class="cursor-pointer bg-white p-4 rounded-full w-fit shadow-[2px_2px_0px_#44403b] hover-active-effect hover:-translate-y-1"
       >
@@ -110,6 +109,7 @@
   const menu = document.querySelector(".sidebar_menu");
 
   menuIcon?.addEventListener("click", () => {
+    console.log("clicked")
     menu?.classList.toggle("active");
     // Lock scrolling when sidebar is opened
     document.body.style.overflow = "hidden";
